@@ -1,0 +1,13 @@
+@(draftOrder: List[String])
+
+@main("DocElyk") {
+
+    @for(player <- draftOrder) {
+        @if(player == "Travis") {
+            <h3 style="color: red;">@player</h3>
+        }else {
+            <h3>@player</h3>
+        }
+    }
+
+}
