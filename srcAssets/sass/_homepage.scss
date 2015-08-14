@@ -1,0 +1,97 @@
+.home-page {
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/sunsetmeadowsclear.png");
+	background-size: cover;
+}
+
+.top-bar {
+	position: relative;
+
+	#menu-button {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+}
+
+#menu-icon {
+	top: 30px;
+	right: 30px;
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 25px;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: all 0.35s ease;
+	-moz-transition: all 0.35s ease;
+	-o-transition: all 0.35s ease;
+	transition: all 0.35s ease;
+	cursor: pointer;
+	z-index: 100;
+
+	span {
+		display: block;
+		position: absolute;
+		height: 5px;
+		border-radius: 9px;
+		width: 100%;
+		background-color: $darkgrey;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+
+	span:nth-child(1) {
+		top: 0px;
+	}
+
+	span:nth-child(2), span:nth-child(3) {
+		top: 10px;
+	}
+
+	span:nth-child(4) {
+		top: 20px;
+	}
+}
+
+#menu-icon:hover {
+	span {
+		background-color: #81b71a;
+	}
+}
+
+#menu-icon.close-icon {
+	span {
+		background-color: #81b71a;
+	}
+
+	span:nth-child(1), span:nth-child(4) {
+		top: 10px;
+		width: 0%;
+		opacity: 0;
+	}
+
+	span:nth-child(2) {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	span:nth-child(3) {
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+
+}

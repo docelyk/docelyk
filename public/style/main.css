@@ -1,0 +1,58 @@
+html, body { width: 100%; height: 100%; }
+
+a:hover { text-decoration: none; }
+
+.home-page { width: 100%; height: 100%; background-image: url("../images/sunsetmeadowsclear.png"); background-size: cover; }
+
+.top-bar { position: relative; }
+.top-bar #menu-button { position: absolute; top: 0px; right: 0px; }
+
+#menu-icon { top: 30px; right: 30px; position: relative; display: block; width: 40px; height: 25px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: all 0.35s ease; -moz-transition: all 0.35s ease; -o-transition: all 0.35s ease; transition: all 0.35s ease; cursor: pointer; z-index: 100; }
+#menu-icon span { display: block; position: absolute; height: 5px; border-radius: 9px; width: 100%; background-color: #212122; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+#menu-icon span:nth-child(1) { top: 0px; }
+#menu-icon span:nth-child(2), #menu-icon span:nth-child(3) { top: 10px; }
+#menu-icon span:nth-child(4) { top: 20px; }
+
+#menu-icon:hover span { background-color: #81b71a; }
+
+#menu-icon.close-icon span { background-color: #81b71a; }
+#menu-icon.close-icon span:nth-child(1), #menu-icon.close-icon span:nth-child(4) { top: 10px; width: 0%; opacity: 0; }
+#menu-icon.close-icon span:nth-child(2) { -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
+#menu-icon.close-icon span:nth-child(3) { -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+body { position: relative; overflow-x: hidden; left: 0px; -webkit-transition: left 0.35s ease; -moz-transition: left 0.35s ease; -o-transition: left 0.35s ease; transition: left 0.35s ease; }
+
+body.slide-open { left: -240px; }
+
+.rule { width: 95%; margin: 10px auto 20px; height: 1px; background-color: #949494; }
+
+.slide-menu { display: block; position: fixed; right: -240px; height: 100%; width: 240px; overflow-y: scroll; background-color: #212122; -webkit-transition: all 0.35s ease; -moz-transition: all 0.35s ease; -o-transition: all 0.35s ease; transition: all 0.35s ease; }
+.slide-menu h1 { text-align: center; color: white; padding: 15px 0; }
+.slide-menu h3 { margin-top: 30px; padding: 20px; }
+.slide-menu ul { padding: 0px; }
+.slide-menu .menu-item { display: block; width: 100%; padding: 20px; -webkit-transition: all 0.35s ease; -moz-transition: all 0.35s ease; -o-transition: all 0.35s ease; transition: all 0.35s ease; }
+.slide-menu .menu-item li { color: #949494; font-size: 1.3em; list-style: none; }
+.slide-menu .menu-item:hover { background-color: #1881cb; box-shadow: 0px 0px 4px #949494 inset; color: white; }
+.slide-menu .menu-item:hover li { color: #212122; font-weight: 700; }
+
+.social-icons { text-align: center; }
+.social-icons .fa { color: #949494; margin-right: 10px; -webkit-transition: color 0.25s ease-out; -moz-transition: color 0.25s ease-out; -o-transition: color 0.25s ease-out; transition: color 0.25s ease-out; }
+.social-icons .fa-soundcloud { margin-right: 0px; }
+.social-icons .fa-linkedin-square:hover { color: #007bb6; }
+.social-icons .fa-facebook-square:hover { color: #3b5998; }
+.social-icons .fa-github-square:hover { color: white; }
+.social-icons .fa-spotify:hover { color: #81b71a; }
+.social-icons .fa-soundcloud:hover { color: #ff3a00; }
+
+@media (min-width: 1200px) { .slide-menu { width: 320px; right: -320px; }
+  body.slide-open { left: -320px; } }
+.slide-menu.open { right: 0px; -webkit-box-shadow: 5px 5px 10px inset black; box-shadow: 5px 5px 10px inset black; }
+
+.ffl-header { width: 100%; height: 150px; background-color: #6887a3; text-align: center; padding: 40px 50px; }
+.ffl-header h1 { margin: 0; }
+@media (min-width: 900px) { .ffl-header h1 { font-size: 4em; } }
+
+.ffl-standings { background-color: #f9f9f9; min-height: 100%; overflow-y: scroll; }
+.ffl-standings .draft-order { padding: 25px; }
+
+/*# sourceMappingURL=main.css.map */

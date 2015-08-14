@@ -1,0 +1,123 @@
+body {
+	position: relative;
+	overflow-x: hidden;
+	left: 0px;
+	-webkit-transition: left 0.35s ease;
+	-moz-transition: left 0.35s ease;
+	-o-transition: left 0.35s ease;
+	transition: left 0.35s ease;
+}
+
+body.slide-open {
+	left: -240px;
+}
+
+.rule {
+	width: 95%;
+	margin: 10px auto 20px;
+	height: 1px;
+	background-color: $lightgrey;
+}
+
+.slide-menu {
+	display: block;
+	position: fixed;
+	right: -240px;
+	height: 100%;
+	width: 240px;
+	overflow-y: scroll;
+	background-color: $darkgrey;
+	-webkit-transition: all 0.35s ease;
+	-moz-transition: all 0.35s ease;
+	-o-transition: all 0.35s ease;
+	transition: all 0.35s ease;
+
+	h1 {
+		text-align: center;
+		color: white;
+		padding: 15px 0;
+	}
+
+	h3 {
+		margin-top: 30px;
+		padding: 20px; 
+	}
+
+	ul {
+		padding: 0px;
+	}
+
+	.menu-item {
+		display: block;
+		width: 100%;
+		padding: 20px;
+		-webkit-transition: all 0.35s ease;
+		-moz-transition: all 0.35s ease;
+		-o-transition: all 0.35s ease;
+		transition: all 0.35s ease;
+
+		li {
+			color: $lightgrey;
+			font-size: 1.3em;
+			list-style: none;
+		}
+	}
+
+	.menu-item:hover {
+		background-color: $blue;
+		box-shadow: 0px 0px 4px $lightgrey inset;
+		color: white;
+
+		li {
+			color: $darkgrey;
+			font-weight: 700;
+		}
+	}
+}
+
+.social-icons {
+	text-align: center;
+	.fa {
+		color: $lightgrey;
+		margin-right: 10px;
+		-webkit-transition: color 0.25s ease-out;
+		-moz-transition: color 0.25s ease-out;
+		-o-transition: color 0.25s ease-out;
+		transition: color 0.25s ease-out;
+	}
+	.fa-soundcloud {
+		margin-right: 0px;
+	}
+	.fa-linkedin-square:hover {
+		color: #007bb6;
+	}
+	.fa-facebook-square:hover {
+		color: #3b5998;
+	}
+	.fa-github-square:hover {
+		color: white;
+	}
+	.fa-spotify:hover {
+		color: #81b71a;
+	}
+	.fa-soundcloud:hover {
+		color: #ff3a00;
+	}
+}
+
+@media (min-width: 1200px) {
+	.slide-menu {
+		width: 320px;
+		right: -320px;
+	}
+
+	body.slide-open {
+		left: -320px;
+	}
+}
+
+.slide-menu.open {
+	right: 0px;
+	-webkit-box-shadow: 5px 5px 10px inset black;
+	box-shadow: 5px 5px 10px inset black;
+}

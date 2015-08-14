@@ -1,13 +1,21 @@
 @(draftOrder: List[String])
 
 @main("DocElyk") {
-
-    @for(player <- draftOrder) {
-        @if(player == "Travis") {
-            <h3 style="color: red;">@player</h3>
-        }else {
-            <h3>@player</h3>
-        }
-    }
-
+	<div class="header ffl-header">
+		<h1>DTB Fantasy Football</h1>
+	</div>
+	<div class="col-xs-12 col-sm-8 ffl-standings">
+		<div class="draft-order">
+			@for(player <- draftOrder) {
+		        @if(player == "Travis") {
+		            <h1 class="player" style="color: red;">@player</h1>
+		        }else {
+		            <h1 class="player">@player</h1>
+		        }
+		    }
+		</div>
+	</div> 
+	<div class="col-xs-12 col-sm-4">
+			
+	</div> 
 }

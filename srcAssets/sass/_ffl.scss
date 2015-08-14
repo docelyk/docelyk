@@ -1,0 +1,23 @@
+.ffl-header {
+	width: 100%;
+	height: 150px;
+	background-color: $bluegrey;
+	text-align: center;
+	h1 {
+		margin: 0;
+		@media (min-width: 900px) {
+			font-size: 4em;
+		}
+	}
+	padding: 40px 50px;
+}
+
+.ffl-standings {
+	background-color: $ultralight;
+	min-height: 100%;
+	overflow-y: scroll;
+
+	.draft-order {
+		padding: 25px;
+	}
+}
